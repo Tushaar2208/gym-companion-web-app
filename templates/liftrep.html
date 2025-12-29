@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lift Rep Predictor</title>
+    <link rel="stylesheet" href="/static/css/styles6.css">
+</head>
+
+<body>
+    <div class="card">
+        <h1>Lift Rep Predictor</h1>
+        <p>Estimate how many reps you can perform with any weight.</p>
+
+        <!-- Input for Current Weight and Reps -->
+        <input type="number" id="current-weight" placeholder="Weight you lift (kg)" required>
+        <input type="number" id="current-reps" placeholder="Reps you perform with this weight" required>
+
+        <!-- Input for New Weight -->
+        <input type="number" id="new-weight" placeholder="Weight you want to lift (kg)" required>
+
+        <!-- Predict Button -->
+        <button onclick="predictReps()">Predict Reps</button>
+
+        <!-- Result Display -->
+        <div id="result" class="result"></div>
+    </div>
+    <!-- Navigation Buttons -->
+    <div class="navigation-buttons">
+        <button onclick="window.location.href='/'" class="nav-btn" title="Home">
+            <span class="icon" style="font-size: 24px;">🏠</span>
+        </button>
+
+        <button onclick="window.location.href='/tools'" class="nav-btn" title="Back to Tools">
+            <span class="icon" style="font-size: 24px;">⬅️</span>
+        </button>
+    </div>
+
+    </body>
+</html>
+    <script>
+        function navigateToHome() {
+            window.location.href = "index.html";
+        }
+
+        function navigateToTools() {
+            window.location.href = "tools.html";
+        }
+    </script>
+
+    <script src="/static/js/script2.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Tools Dashboard</title>
+    <link rel="stylesheet" href="/static/css/toolstyle.css">
+</head>
+
+<body>
+    <div class="card dashboard">
+        <h1>Gym-Tools Dashboard</h1>
+
+        <div class="tools-container">
+            <a href="{{ url_for('bmi') }}" class="tool-link">
+                <div class="tool-box">
+                    <h2>BMI Calculator</h2>
+                    <p>Calculate your Body Mass Index</p>
+                </div>
+            </a>
+
+            <a href="{{ url_for('maintenance') }}" class="tool-link">
+                <div class="tool-box">
+                    <h2>Maintenance Calories</h2>
+                    <p>Estimate your daily calorie needs</p>
+                </div>
+            </a>
+
+            <a href="{{ url_for('protein') }}" class="tool-link">
+                <div class="tool-box">
+                    <h2>Protein Calculator</h2>
+                    <p>Calculate your daily protein intake</p>
+                </div>
+            </a>
+
+            <a href="{{ url_for('liftrep') }}" class="tool-link">
+                <div class="tool-box">
+                    <h2>Lift Reps Predictor</h2>
+                    <p>Predict your reps for a given weight</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="home-button">
+        <button onclick="navigateToHome()" class="nav-btn">
+            <span class="icon">&#x1F3E0;</span> </button>
+    </div>
+
+    <script>
+        function navigateToHome() {
+            // FIX 3: Redirect to the main route "/", not the file "index.html"
+            window.location.href = "/";
+        }
+    </script>
+
+</body>
+</html>

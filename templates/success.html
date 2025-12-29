@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <style>
+        /* 1. GLOBAL LAYOUT & BACKGROUND */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Use your gym background, fallback to black */
+            background: url('/static/images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            background-color: black;
+            font-family: 'Montserrat', sans-serif;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        /* Dark overlay to make text readable (same as your other pages) */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7); /* Darker for focus */
+            z-index: -1;
+        }
+
+        /* 2. GLASS CARD (Minimalist) */
+        .card {
+            background: rgba(255, 255, 255, 0.05); /* Very subtle glass */
+            padding: 50px;
+            border-radius: 15px;
+            text-align: center;
+            backdrop-filter: blur(15px); /* Strong blur */
+            border: 1px solid rgba(255, 255, 255, 0.1); /* Thin border */
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            max-width: 600px;
+            width: 85%;
+        }
+
+        h1 {
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 4px; /* Widescreen look */
+            font-weight: 700;
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 20px;
+            display: inline-block;
+        }
+
+        p {
+            font-size: 1rem;
+            letter-spacing: 1px;
+            color: #ccc;
+            margin-top: 10px;
+        }
+
+        /* 3. ASCII ART (Clean & Monospace) */
+        .ascii-art {
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre;
+            font-size: 10px;
+            line-height: 1.1;
+            color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+            margin: 30px auto;
+            text-align: left;
+            display: inline-block;
+        }
+
+        /* 4. GHOST BUTTON (Minimalist) */
+        .btn-home {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background: transparent;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-home:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Submitted!</h1>
+        <p>We will contact you soon.</p>
+
+        <div class="ascii-art">
+  _______ _                 _     __     __
+ |__   __| |               | |    \ \   / /
+    | |  | |__   __ _ _ __ | | __  \ \_/ /__  _   _
+    | |  | '_ \ / _` | '_ \| |/ /   \   / _ \| | | |
+    | |  | | | | (_| | | | |   <     | | (_) | |_| |
+    |_|  |_| |_|\__,_|_| |_|_|\_\    |_|\___/ \__,_|
+        </div>
+
+        <br>
+
+        <button class="btn-home" onclick="window.location.href='/'">
+            Back to Home
+        </button>
+    </div>
+
+</body>
+</html>
