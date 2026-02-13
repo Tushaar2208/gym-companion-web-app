@@ -1,6 +1,3 @@
-Here is your content cleanly formatted as a professional **README.md** file, ready to paste directly into GitHub:
-
----
 
 # Gym Companion Web App
 
