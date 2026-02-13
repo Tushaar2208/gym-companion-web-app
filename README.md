@@ -1,70 +1,182 @@
-# Gym Companion Web App
-#### Video Demo:  <https://youtu.be/LScOSHLW-xk>
-#### Description:
-
-**Name:** Tushar
-**GitHub Username:** Tushaar2208
-**City, Country:** [Your City, Country]
-**Date:** December 2025
+Here is your content cleanly formatted as a professional **README.md** file, ready to paste directly into GitHub:
 
 ---
 
-This is a web-based application designed to help gym users track their fitness goals and manage their membership. The project was built using **Python (Flask)**, **SQL**, **HTML**, and **CSS**. It solves the problem of needing multiple different calculators (BMI, Protein, Rep Max) by consolidating them into a single, easy-to-use interface, while also allowing new users to sign up for the gym.
+# Gym Companion Web App
 
-### Key Features
-* **Membership Registration:** Users can sign up for the gym, and their details are securely stored in a SQL database.
-* **Fitness Calculators:** Includes tools for calculating:
-    * **BMI (Body Mass Index):** Determines if a user is in a healthy weight range.
-    * **Protein Intake:** Estimates daily protein needs based on activity level.
-    * **Maintenance Calories:** Calculates calories needed to maintain current weight.
-    * **One-Rep Max:** Estimates the maximum weight a user can lift for one repetition.
-* **Feedback System:** Users can send feedback which is processed by the server and acknowledged with a success page.
-* **Robust Error Handling:** As a core feature, the application implements server-side validation (in Python) to prevent empty form submissions and handle database errors gracefully, ensuring the app doesn't crash on invalid input.
+🎥 **Video Demo:**
+[https://youtu.be/LScOSHLW-xk](https://youtu.be/LScOSHLW-xk)
 
-### Distinction from Previous Projects
-This project represents a significant evolution from my previous gym website project, [Strive-Fit-Gym](https://github.com/Tushaar2208/Strive-Fit-Gym-). While my earlier work focused primarily on the **front-end design** (HTML, CSS, and basic JavaScript) to create a visual layout, this submission upgrades the concept into a fully functional **Full-Stack Web Application**.
+---
 
-Key technical improvements include:
-* **From Static to Dynamic:** The previous project was a static website. This project uses **Flask (Python)** to dynamically render pages and process user data on the server side.
-* **Database Integration:** Unlike the previous version which could not store data, I integrated a **SQLite database** (`gym.db`) to persistently store user registrations and feedback.
-* **Backend Logic:** I implemented complex server-side logic for the fitness calculators and added robust **error checking** to handle invalid inputs securely.
+## Overview
 
-### Project Structure
+Gym Companion is a web-based gym promotional and utility platform built as my CS50 final project.
 
-The project consists of the following main files and directories:
+The application combines a gym membership registration system with interactive fitness calculators (BMI, Protein Intake, Maintenance Calories, and One-Rep Max) into a single streamlined interface.
 
-#### `app.py`
-This is the main controller for the application. It initializes the Flask app and defines the routes (URLs) for the website.
-* **Routes:** It includes routes for the homepage (`/`), registration (`/register`), and various tools (`/bmi`, `/protein`, etc.).
-* **Logic:** It handles form submissions (POST requests), performs **server-side validation** to ensure no empty fields are submitted, and interacts with the SQLite database.
-* **Database Integration:** Uses the CS50 SQL library to execute queries like `INSERT INTO members` to save user data.
+The goal of this project was to demonstrate full-stack web development using Flask and SQLite while consolidating commonly used fitness tools into one accessible platform.
 
-#### `gym.db`
-A SQLite database that stores the application's data.
-* **Table `members`:** Stores registration details (First Name, Last Name, Email, Phone, Club Location).
-* **Table `feedbacks`:** Stores user messages and feedback.
+---
 
-#### `templates/`
-This folder contains the HTML files for the application. I used **Jinja2** templating to make the pages dynamic.
-* `layout.html`: The base template that contains the navigation bar and footer. All other pages extend this file to ensure a consistent design.
-* `index.html`: The homepage.
-* `register.html` / `success.html`: Forms and confirmation pages for user actions.
-* `bmi.html`, `protein.html`, `liftrep.html`: The interface pages for the specific fitness calculators.
+## Tech Stack
 
-#### `static/`
-Contains the CSS files (e.g., `styles.css`) used to style the application.
+* Python (Flask)
+* SQLite
+* HTML5
+* CSS3
+* Jinja2 Templating
+* CS50 SQL Library
 
-### Design Choices
-**Visual Style:**
-The design of the website was heavily inspired by the **Equinox Gym** website. I aimed to replicate that high-end, luxury fitness aesthetic. To achieve this, I used:
-* A minimal, dark-themed color palette to convey sophistication.
-* High-contrast typography for readability and modern appeal.
-* Clean spacing and layout to ensure a premium user experience.
+---
 
-**Technical Decisions:**
-I chose **Flask** because it is lightweight and allows for quick setup of routes and request handling in Python. For the database, **SQLite** was chosen for its simplicity and portability, which is perfect for a project of this scale. I prioritized **error checking** in the backend Python code (rather than just relying on HTML `required` attributes) to ensure data integrity and prevent server errors.
+## Core Features
 
-### How to Run
-1.  Open the terminal.
-2.  Run the command: `flask run`
-3.  Click the link provided in the terminal to view the website.
+### Membership Registration
+
+* Users can register for gym membership
+* Data is stored in a SQLite database
+* Server-side validation prevents empty or invalid submissions
+
+### Fitness Calculators
+
+* **BMI Calculator** – Determines weight classification based on height and weight
+* **Protein Intake Calculator** – Estimates daily protein requirements
+* **Maintenance Calorie Calculator** – Estimates caloric needs
+* **One-Rep Max Calculator** – Estimates maximum lifting capacity
+
+> ⚠️ Note: All calculators provide general fitness estimates and are not intended for medical use.
+
+### Feedback System
+
+* Users can submit feedback
+* Feedback is stored in the database
+* Users receive a success confirmation page
+
+### Backend Validation
+
+The application implements robust **server-side validation in Python** to:
+
+* Prevent empty form submissions
+* Handle database errors gracefully
+* Maintain data integrity
+
+---
+
+## Project Architecture
+
+### `app.py`
+
+Main controller of the application.
+
+Responsibilities:
+
+* Defines routes (`/`, `/register`, `/bmi`, etc.)
+* Handles GET and POST requests
+* Performs server-side validation
+* Executes SQL queries to store and retrieve data
+
+### `gym.db`
+
+SQLite database containing:
+
+* `members` table – Stores registration details
+* `feedbacks` table – Stores user feedback messages
+
+### `templates/`
+
+HTML templates using Jinja2:
+
+* `layout.html` – Base layout template
+* `index.html` – Homepage
+* `register.html` – Registration form
+* `success.html` – Confirmation page
+* `bmi.html`, `protein.html`, `liftrep.html` – Calculator pages
+
+### `static/`
+
+Contains CSS styling files.
+
+---
+
+## Technical Evolution
+
+This project builds upon a previous static gym website project.
+
+Previous version:
+
+* Static HTML/CSS site
+* No backend logic
+* No database integration
+
+Current version improvements:
+
+* Dynamic routing using Flask
+* SQLite database integration
+* Persistent data storage
+* Server-side validation
+* Backend calculator logic
+
+This represents a transition from front-end development to full-stack web application design.
+
+---
+
+## Design Approach
+
+### Visual Style
+
+The design draws inspiration from premium gym branding aesthetics, featuring:
+
+* Dark, minimal color palette
+* Clean spacing
+* High-contrast typography
+* Modern layout structure
+
+### Technical Decisions
+
+* **Flask** was chosen for lightweight and flexible backend development.
+* **SQLite** was selected for simplicity and portability.
+* Emphasis was placed on backend validation to ensure reliability and stability.
+
+---
+
+## Installation & Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Tushaar2208/gym-companion-web-app.git
+```
+
+### 2. Navigate to Project Directory
+
+```bash
+cd gym-companion-web-app
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the Application
+
+```bash
+flask run
+```
+
+### 5. Open in Browser
+
+Click the local development link shown in the terminal.
+
+---
+
+## Future Improvements
+
+* Improve calculator accuracy
+* Add user authentication system
+* Enhance mobile responsiveness
+* Deploy to a cloud platform
+* Add progress tracking features
+
